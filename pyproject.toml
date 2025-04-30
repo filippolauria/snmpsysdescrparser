@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snmpsysdescrparser"
+version = "0.1.0"
+description = "A parser for SNMP sysDescr strings from various network devices"
+readme = "README.md"
+authors = [
+    {name = "Filippo Lauria", email = "filippo.lauria@iit.cnr.it"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Telecommunications Industry",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Networking :: Monitoring",
+]
+requires-python = ">=3.7"
+
+[project.scripts]
+snmpsysdescrparser = "snmpsysdescrparser.__main__:main"
+
+[project.urls]
+"Homepage" = "https://github.com/filippolauria/snmpsysdescrparser"
+"Bug Tracker" = "https://github.com/filippolauria/snmpsysdescrparser/issues"
+
+[project.optional-dependencies]
+dev = [
+    "flake8>=7.0.0",
+]

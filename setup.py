@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+from setuptools import setup, find_packages
+
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setup(
+    name="snmpsysdescrparser",
+    version="0.1.0",
+    author="Filippo Maria Lauria",
+    author_email="filippo.lauria@iit.cnr.it",
+    description="A parser for SNMP sysDescr strings from various network devices",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/filippolauria/snmpsysdescrparser",
+    packages=find_packages(),
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Telecommunications Industry",
+        "Intended Audience :: System Administrators",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Operating System :: OS Independent",
+        "Topic :: System :: Networking :: Monitoring",
+    ],
+    python_requires=">=3.7",
+    entry_points={
+        "console_scripts": [
+            "snmpsysdescrparser=snmpsysdescrparser.__main__:main",
+        ],
+    },
+)
